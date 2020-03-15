@@ -1,5 +1,8 @@
 # PRÁCTICA 1 - PROCESOS #
 
+## Daniel Santa rendón - 1040050021
+## Daniel Torres González - 1020492000
+
 ## 1. Objetivos ##
 1. Familiarizarse con las diferentes estructuras y funciones relacionadas con el manejo de procesos en linux.
 2. Codificar programas que hagan uso del API de procesos.
@@ -26,3 +29,37 @@ Realizar los siguientes ejercicios:
 Los entregables para esta practica incluiran:
 1. Codigo de los ejercicos propuestos.
 2. Solución a las preguntas planteadas. apoyar la explicación con graficas donde lo vea necesario.
+
+# Respuestas #
+
+## 1)
+- El valor de la variable en el proceso hijo es 100
+- Antes de cambiarlo, para ambos procesos, el valor es 100, 
+cada variable cambia únicamente en su proceso
+
+## 2)
+-Sí, cada uno puede acceder al file descriptor y funcionar con el, ambos editan el mismo archivo
+-No hay  una forma concurrente de esscribir a la misma vez, lo más cercano es que uno escriba
+inmediatamente desoués que el otro, ahí, lo que sicede es que ambos escriben en el mismo archivo
+pero en el mimsmo orden de instrucciones.
+
+## 3)
+Sí, se puede hacer usando la función sleep, esta función detiene un momento el proceso padre y
+el hijo termina su ejecución poniendo "Hello" antes que "Goodbye"
+
+## 4)
+
+
+## 5)
+-El valor de retorno del wait es el PID del proceso  hijo
+-Al ejecutarse la función wait en un proceso sin hijos, esta retornará -1
+
+## 6)
+Se puede usar cuando se tiene más de un hijo y se debe esperar hasta que finalice la ejecución de uno
+o varios de ellos, esto facilita para dar un orden a la lista de procesos padre e hijos
+
+## 7)
+Fracasa el intento al usar la función printf porque el descriptor está cerrado, pero continúa su 
+ejecución sin ningún inconveniente
+
+## 8)
