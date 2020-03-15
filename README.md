@@ -48,7 +48,7 @@ pero en el mimsmo orden de instrucciones.
 el hijo termina su ejecución poniendo "Hello" antes que "Goodbye"
 
 ## 4)
-Existen tantas variantes de esta llamada básica pues se satisface la necesidad de como pasar los 
+- Existen tantas variantes de esta llamada básica pues se satisface la necesidad de como pasar los 
 argumentos al fichero que se va a ejecutar, también, de la forma en que el sistema encuentra el 
 nombre del archivo que ejecuta. Por ejemplo, para las funciones execlp, execl y execle los 
 argumentos se entregan de manera individual a al método del fichero. Mientras que para execve, 
