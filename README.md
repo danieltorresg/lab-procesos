@@ -38,28 +38,33 @@ Los entregables para esta practica incluiran:
 cada variable cambia únicamente en su proceso
 
 ## 2)
--Sí, cada uno puede acceder al file descriptor y funcionar con el, ambos editan el mismo archivo
--No hay  una forma concurrente de esscribir a la misma vez, lo más cercano es que uno escriba
+- Sí, cada uno puede acceder al file descriptor y funcionar con el, ambos editan el mismo archivo
+- No hay  una forma concurrente de esscribir a la misma vez, lo más cercano es que uno escriba
 inmediatamente desoués que el otro, ahí, lo que sicede es que ambos escriben en el mismo archivo
 pero en el mimsmo orden de instrucciones.
 
 ## 3)
-Sí, se puede hacer usando la función sleep, esta función detiene un momento el proceso padre y
+- Sí, se puede hacer usando la función sleep, esta función detiene un momento el proceso padre y
 el hijo termina su ejecución poniendo "Hello" antes que "Goodbye"
 
 ## 4)
-
+Existen tantas variantes de esta llamada básica pues se satisface la necesidad de como pasar los 
+argumentos al fichero que se va a ejecutar, también, de la forma en que el sistema encuentra el 
+nombre del archivo que ejecuta. Por ejemplo, para las funciones execlp, execl y execle los 
+argumentos se entregan de manera individual a al método del fichero. Mientras que para execve, 
+execv y execvp lo parámetros son pasados como un arreglo de apuntadores.Para las funciones execve
+y execle, se le agrega, además, un arreglo de apuntadores a las variables de entorno. 
+Por otro lado, las funciones execvp y execlp, para encontrar el nombre del archivo path pasado 
+como argumento, utilizan la variable de entorno PATH.
 
 ## 5)
--El valor de retorno del wait es el PID del proceso  hijo
--Al ejecutarse la función wait en un proceso sin hijos, esta retornará -1
+- El valor de retorno del wait es el PID del proceso  hijo
+- Al ejecutarse la función wait en un proceso sin hijos, esta retornará -1
 
 ## 6)
-Se puede usar cuando se tiene más de un hijo y se debe esperar hasta que finalice la ejecución de uno
+- Se puede usar cuando se tiene más de un hijo y se debe esperar hasta que finalice la ejecución de uno
 o varios de ellos, esto facilita para dar un orden a la lista de procesos padre e hijos
 
 ## 7)
-Fracasa el intento al usar la función printf porque el descriptor está cerrado, pero continúa su 
+- Fracasa el intento al usar la función printf porque el descriptor está cerrado, pero continúa su 
 ejecución sin ningún inconveniente
-
-## 8)
